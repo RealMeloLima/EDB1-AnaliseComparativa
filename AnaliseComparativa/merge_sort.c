@@ -1,9 +1,9 @@
 #include "sort_utils.h"
 
-void merge(int arr[], int l, int m, int r, Metricas *m) {
+void merge(int arr[], int l, int mid, int r, Metricas *m) {
     int i, j, k;
-    int n1 = m - l + 1;
-    int n2 = r - m;
+    int n1 = mid - l + 1;
+    int n2 = r - mid;
 
     int *L = (int *)malloc(n1 * sizeof(int));
     int *R = (int *)malloc(n2 * sizeof(int));
@@ -11,7 +11,7 @@ void merge(int arr[], int l, int m, int r, Metricas *m) {
     for (i = 0; i < n1; i++)
         L[i] = arr[l + i];
     for (j = 0; j < n2; j++)
-        R[j] = arr[m + 1 + j];
+        R[j] = arr[mid + 1 + j]; // Usa 'mid'
 
     i = 0; j = 0; k = l; 
     while (i < n1 && j < n2) {
@@ -24,7 +24,7 @@ void merge(int arr[], int l, int m, int r, Metricas *m) {
             j++;
         }
         k++;
-        if (m != NULL) m->trocas++;
+        if (m != NULL) m->trocas++; 
     }
 
     while (i < n1) {
