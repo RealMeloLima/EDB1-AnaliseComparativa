@@ -35,6 +35,8 @@ gcc main.c sort_utils.c bubble_sort.c insertion_sort.c selection_sort.c merge_so
 Após a compilação bem-sucedida, execute o programa. O código irá automaticamente rodar todos os algoritmos em todos os tamanhos de vetor (1.000, 5.000, 10.000, 25.000) e em todos os tipos de *dataset* (Aleatório, Quase Ordenado, Inversamente Ordenado).
 
 ```
+### 2. Executar arquivo compilado
+
 ```bash
 ./analise_ordenacao
 ```
