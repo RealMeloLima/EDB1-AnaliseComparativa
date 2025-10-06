@@ -21,7 +21,16 @@ O projeto segue uma arquitetura modular em C para facilitar a organização das 
 | `quick_sort.c` | Implementação do Quick Sort, com contadores. |
 | `analise_ordenacao` | Implementação do Quick Sort, com contadores. |
 
-## ⚙️ Como Executar
+## ⚙️ Como Compilar e Executar
+
+Para replicar os resultados, você precisará de um compilador C (como GCC) em seu sistema operacional (Linux, macOS, ou WSL/MinGW no Windows).
+
+### 1. Compilação do Código
+
+Use o seguinte comando no terminal para compilar todos os arquivos `.c` e criar o executável `analise_ordenacao`:
+
+```bash
+gcc main.c sort_utils.c bubble_sort.c insertion_sort.c selection_sort.c merge_sort.c quick_sort.c -o analise_ordenacao
 
 Após a compilação bem-sucedida, execute o programa. O código irá automaticamente rodar todos os algoritmos em todos os tamanhos de vetor (1.000, 5.000, 10.000, 25.000) e em todos os tipos de *dataset* (Aleatório, Quase Ordenado, Inversamente Ordenado).
 
